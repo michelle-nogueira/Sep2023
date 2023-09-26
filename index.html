@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
         <style>
@@ -8,7 +9,7 @@
                 margin:7%;
                 color:#000;
                 font-family: 'Signika', sans-serif;
-                font-size: x-large;
+                font-size: xx-large;
                 background-image: url("background.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
@@ -18,7 +19,15 @@
             }
             .bold{
                 font-weight: bold;
-                font-size: xx-large;
+                font-size: 48px;
+            }
+            @media (width <= 576px) {
+                body{
+                    font-size: 48px;
+                }
+                .bold{
+                    font-size: 52px;
+                }
             }
         </style>
     </head>
