@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
         <style>
@@ -10,7 +12,7 @@
                 color:#000;
                 font-family: 'Signika', sans-serif;
                 font-size: 24px;
-                background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("background.jpg");
+                background-image: url("background.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -21,17 +23,65 @@
                 font-weight: bold;
                 font-size: 32px;
             }
-            /* @media (width <= 576px) {
+            @-webkit-keyframes rotating /* Safari and Chrome */ {
+                0% { zoom:100%; }
+                15% { zoom:120%; }
+                25% { zoom:110%; }
+                35% { zoom:120%; }
+                100% { zoom:100%; }
+            }
+            @-o-keyframes rotating {
+                0% { zoom:100%; }
+                15% { zoom:120%; }
+                25% { zoom:110%; }
+                35% { zoom:120%; }
+                100% { zoom:100%; }
+            }
+            @-ms-keyframes rotating {
+                0% { transform:scale(1); }
+                15% { transform:scale(1.2); }
+                25% { transform:scale(1.1); }
+                35% { transform:scale(1.2); }
+                100% { transform:scale(1); }
+            }
+            @keyframes rotating {
+                0% { transform:scale(1); }
+                15% { transform:scale(1.2); }
+                25% { transform:scale(1.1); }
+                35% { transform:scale(1.2); }
+                100% { transform:scale(1); }
+            }
+            .float{
+                position:fixed;
+                width:120px;
+                height:120px;
+                top:40px;
+                right:40px;
+                border-radius:60px;
+                box-shadow: 2px 2px 3px #999;
+                z-index:100;
+                -webkit-animation: rotating 1s linear infinite;
+                -moz-animation: rotating 1s linear infinite;
+                -ms-animation: rotating 1s linear infinite;
+                -o-animation: rotating 1s linear infinite;
+                animation: rotating 1s linear infinite;
+            }
+            @media (width <= 576px) {
                 body{
-                    font-size: 24px;
+                    margin-top: 90px;
+                    margin-bottom: 50px;
                 }
-                .bold{
-                    font-size: 32px;
+                .float{
+                    top:20px;
+                    right:20px;
+                    width:60px;
+                    height:60px;
                 }
-            } */
+            }
         </style>
     </head>
     <body>
+        <img src="mi.png" class="float">
         <p class="bold">Feliz aniversário Mi!</p>
         <p>As vezes a gente acha que já disse tudo, que o relacionamento está garantido, que não pairam mais dúvidas...</p>
         <p>Contudo, o tempo sempre traz aprendizado e o mais recente é que, como todo o resto, há que se ter manutenção constante; inclusive, nessa maravilhosa relação que estabelecemos há mais de 10 anos!</p>
