@@ -3,25 +3,56 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <style>
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
             body{
-                background-color:#FFDEDE;
+                background-color:#fefefe;
                 margin:7%;
                 color:#000;
                 font-family: 'Signika', sans-serif;
                 font-size: 24px;
-                background-image: url("background.jpg");
+                /* background-image: url("paint.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-blend-mode:overlay;
+                background-blend-mode:hard-light; */
                 position: relative;
             }
             .bold{
                 font-weight: bold;
                 font-size: 32px;
+            }
+            .destaque{
+                font-family: Lobster, display !important;
+                font-size: 48px;
+                text-align: center;
+            }
+            .left-top, .center-down{
+                margin-top: -8%;
+                margin-left: -8%;
+                object-fit: cover;
+                display: block;
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                margin-right: auto;
+                position: relative;
+            }
+            .left-top{
+                margin-top: -8%;
+                margin-left: -8%;
+            }
+            .center-down{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
             }
             @-webkit-keyframes rotating /* Safari and Chrome */ {
                 0% { zoom:100%; }
@@ -71,11 +102,18 @@
                     margin-top: 70px;
                     margin-bottom: 40px;
                 }
+                .left-top{
+                    margin-top: -70px;
+                    width: 350px;
+                }
                 .float{
                     top:30px;
                     right:30px;
                     width:90px;
                     height:90px;
+                }
+                .destaque{
+                    font-size: 40px;
                 }
             }
             @media (width <= 576px) {
@@ -83,18 +121,26 @@
                     margin-top: 90px;
                     margin-bottom: 50px;
                 }
+                .left-top{
+                    margin-top: -90px;
+                    width: 250px;
+                }
                 .float{
                     top:20px;
                     right:20px;
                     width:60px;
                     height:60px;
                 }
+                .center-down{
+                    width: 274px;
+                }
             }
         </style>
     </head>
     <body>
+        <img src="flor.top.png" class="left-top">
         <img src="mi.png" class="float">
-        <p class="bold">Feliz aniversário Mi!</p>
+        <p class="bold destaque" style="margin-top: 0;">Feliz aniversário Mi!</p>
         <p>As vezes a gente acha que já disse tudo, que o relacionamento está garantido, que não pairam mais dúvidas...</p>
         <p>Contudo, o tempo sempre traz aprendizado e o mais recente é que, como todo o resto, há que se ter manutenção constante; inclusive, nessa maravilhosa relação que estabelecemos há mais de 10 anos!</p>
         <p>Sempre haverá espaço para mais flores, mais carinho, mais palavras de encorajamento, mais compreensão, mais confidencialidade, mais cumplicidade, mais parceria e, por fim, mais união.</p>
@@ -107,9 +153,9 @@
         <p>Não é se o cartão de aniversário é bonito ou se a qualidade do papel é fotográfica, é sobre ter a consideração de parar para escrever, é querer ter certeza que apesar da evolução pessoal a essência da mensagem ainda cativa a outra parte, é ter medo de escrever alguma coisa que possa ser interpretada de forma errada, é se importar se vai emocionar positivamente.</p>
         <p>Tenho certeza que há quem jure que eu não tenha essa consciência toda por conta do que falo e faço ou por causa do que deixo de falar e de fazer. Em última análise, entretanto, só me reservo ao direito de dissociar meus atos e palavras do que sinto. Acredito, no fundo do meu âmago, que roubar um sorriso descontraindo valha tanto quanto um "eu te amo" bem colocado; pois, o tempo tem o poder mágico de transformar qualquer "mau bocado" em piada nostálgica.</p>
         <p>Eu não te amo apenas, eu amo a imagem residual inconsciente que tenho de ti... Uma pessoa justa, uma esposa imbatível, uma parceira fiel, uma mulher caprichosa, uma mãe exemplar, de um carater indubitável, de fé ímpar, que se coloca como porto seguro para todos os navios, de equilíbrio perfeito para motivar na prostração e confortar na inquietação, com uma felicidade que contagia e uma disposição infindável... e o tempo só me ensina mais e mais a teu respeito, quando eu penso que a lista de características positivas acabou eu me dou conta de um detalhezinho pequeno, e quando exploro racionalmente percebo que ele é indício de algo muito maior, algo que agrega ainda mais à minha ideia de "Michelle". Uma ideia tão impactante que eu gostaria que todos a pudessem construir em relação aos seus conjugês, pois garantidamente os cartórios não registrariam mais divórcios.</p>
-        <p>Meu Deus, meu pai, me ajude a continuar fazendo o que está dando certo para manter a graça de continuar com essa Tua filha até o último dos meus dias, meu Pai.</p>
+        <p>Não bastasse tudo isso, o que você me proporcionou e proporciona não tem preço. A família que formamos, e poder estar junto dela, é digno de celebração e graça diária. E quando "estivermos bem velhinhos" (usando suas próprias palavras) olharemos para nossa trajetória e nos encheremos de orgulho, e olharemos um para o outro e nos encheremos da admiração máxima. Admiração máxima: por termos desfrutado de  tudo o que tínhamos para oferecer um ao outro; e, Orgulho: por termos um dia tomado a decisão de "nos tornarmos maior do que a soma das partes que somos".</p>
+        <p>Meu Deus, meu pai, me ajude a continuar fazendo o que está dando certo para manter a graça de continuar com essa Tua filha até o último dos meus dias, meu Pai. E abençoa, Senhor, essa união; que quem te pede quer acima de tudo o bem da família que a ele entregaste a cuidado.</p>
         <p>Eu desejo que o dia de hoje chegue aos seus pés e seja tão alegre quanto é a minha vida graças à tua existência.</p>
-        <p class="bold">Eu te amo Mi.</p>
-        <p class="bold">Adriano</p>
-    </body>
+        <p class="bold destaque">Eu te amo, Adriano.</p>
+        <img src="flor.bottom.png" class="center-down">
 </html>
