@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            @keyframes fade {
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+            body{
+                line-height: 2;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: clamp(0.9rem, 2vw, 1.25rem);
+                /* background-color: #ff00cb12; */
+                margin: 0;
+                /* margin-bottom: 20rem; */
+            }
+            h1{
+                font-size: 1.2rem;
+            }
+            h1{
+                margin: 0.5rem 0;
+            }
+            p{
+                margin: 0.5rem 0;
+            }
+            .container{
+                height: 100vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                perspective: 10px;
+            }
+            p, li{
+                animation: fade 2s linear both;
+                animation-timeline: view();
+                animation-range: entry 50% cover 50%;
+            }
+            .img266{
+                height: 166px;
+                width: unset !important;
+                border-radius: unset !important;
+                animation: fade both linear;
+                animation-duration: 1ms;
+                animation-timeline: view();
+                animation-range: entry 50% cover 50%;
+                margin-top: 2rem;
+            }
+            img{
+                width: 100%;
+            }
+            .extra-space{
+                margin-bottom: 2rem;
+            }
+            section{
+                padding: 2.5rem 15vw;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .section-01{
+                background-color: #a7d781;
+            }
+            .section-02{
+                background-color: #a2d2f3;
+            }
+            .section-03{
+                background-color: #e3bde1;
+            }
+            .section-04{
+                background-color: #FDD8AF;
+            }
+            .spacer {
+                position: absolute;
+                aspect-ratio: 900 / 300;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .pink-to-green{
+                background-image: url('./pink-to-green.svg');
+            }
+            .green-to-blue{
+                background-image: url('./green-to-blue.svg');
+            }
+            .blue-to-pink{
+                background-image: url('./blue-to-pink.svg');
+            }
+            .pink-to-orange{
+                background-image: url('./pink-to-orange.svg');
+            }
+            .orange-to-green{
+                background-image: url('./orange-to-green.svg');
+            }
+            .orange-to-blue{
+                background-image: url('./orange-to-blue.svg');
+            }
+            @media (width < 800px) {
+                body{
+                    text-align: center;
+                }
+                header{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                    height: 530px;
+                    transform-style: preserve-3d;
+                    z-index: -1;
+                }
+                .hero-img-small {
+                    position: absolute;
+                    background-image: url('./top.jpg');
+                    height: 530px;
+                    width: 100%;
+                    object-fit: cover;
+                    background-position: center 20%;
+                    z-index: -1;
+                    transform: translateZ(-10px) scale(2);
+                    top: -10rem;
+                }
+                .hero-text-small {
+                    font-size: 2.25rem;
+                    font-weight: 700;
+                    color: #4bb4ff;
+                    text-shadow: 1px 1px 0px #291b1b;
+                    margin-bottom: 2rem;
+                }
+                .hero-big{
+                    display: none;
+                }
+                .x-margin{
+                    margin: 0 1rem;
+                    margin-top: 1.5rem;
+                }
+                .bottom-img-text{
+                    font-size: 1.1rem;
+                }
+                ol{
+                    padding-inline-start: 0;
+                }
+                li{
+                    list-style-type: none;
+                }
+                li::before{
+                    content: "\2661";
+                    padding-right: 5px;
+                }
+            }
+            /* @media (width >= 400px) {
+                body{
+                    padding: 2rem 2rem 15rem 2rem;
+                }
+                h1{
+                    margin: 1rem 0;
+                }
+                p{
+                    margin: 1rem 0;
+                }
+                ol {
+                    padding-left: 1.2em;
+                    margin: 0;
+                }
+                .container{
+                    max-width: 1000px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .name{
+                    margin-top: 3rem;
+                }
+                .img-max-700{
+                    max-width: 700px;
+                }
+                .pic-with-text{
+                    position: relative;
+                    color: rgba(255, 255, 255, 1);
+                    text-shadow: 1px 1px gray;
+                    margin: 0 auto;
+                }
+                .extra-space{
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+                .bottom-img-text{
+                    position: absolute;
+                    top: 0%;
+                    left: 40%;
+                    transform: translate(-34%, 28%);
+                    font-size: 4cqmin;
+                    line-height: 1.5;
+                    text-align: center;
+                }
+                .right-or-center{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .upper-img-text{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 60%);
+                    font-size: 10cqmin;
+                    line-height: 1;
+                    text-align: center;
+                }
+            } */
+            @media (width >= 800px) {
+                .background{
+                    display: none;
+                }
+                body{
+                    padding: 3rem 3rem 20rem 3rem;
+                }
+                .name{
+                    margin-top: 5rem;
+                }
+                h1{
+                    font-size: 1.5rem;
+                }
+                .img266{
+                    height: 266px;
+                }
+                .extra-space{
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                }
+                img{
+                    border-radius: 30px;
+                }
+                .extra-space{
+                    margin-top: 2rem;
+                }
+            }
+        </style>
+        <title>30/09/2024</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="hero-big img-max-700">
+                    <img src="./top.jpg"/>
+                    <span class="upper-img-text">Feliz Aniversário!</span>
+                </div>
+                <div class="hero-img-small"></div>
+                <div class="hero-text-small">Feliz Aniversário!</div>
+            </header>
+            <section class="section-01">
+                <div class="spacer pink-to-green" style="top: -29vw;"></div>
+                <h1 class="name">Mi,</h1>
+                <div class="right-or-center">
+                    <p>Era uma vez uma menina cheia de sonhos e desejos que acreditava pudesse realizá-los para ser feliz. Essa menina despida de qualquer conhecimento sabia que precisaria se agarrar a algo para que pudesse alcançar seus objetivos, e isso era tudo o que ela tinha certeza.</p>
+                    <img class="img266" src="./image01.png"/>
+                </div>
+            </section>
+            <section class="section-02">
+                <div class="spacer green-to-blue" style="top: -32vw;"></div>
+                <div class="right-or-center">
+                    <p>Com uma infância difícil, não conseguia compreender direito por que algumas coisas que vivenciava tinham que ser daquele jeito. Por que algumas pessoas que dizem amar usam meios ou formas tão negativas para demonstrarem seu amor? Por que alguns precisam ralar tanto e outros nem tanto? Por que não conseguem se colocar no meu lugar para saber como eu me sinto?</p>
+                    <img class="img266" src="./image02.png"/>
+                </div>
+            </section>
+            <section class="section-03">
+                <div class="spacer blue-to-pink" style="top: -33vw;"></div>
+                <div class="right-or-center">
+                    <p>Mas num jogo de muitas perguntas ela encontrou uma única resposta para libertá-la de sua realidade: Deus. Com Ele é que ela começou a ressignificar muitas de suas experiências. Nele ela conseguiu encontrar inspiração para moldar o seu caráter e tornar-se uma pessoa melhor do que a soma daquelas com quem interagia. Em torno de Sua bondade e visão é que ela escolheu ver seus pares como irmãos que, como ela, precisam de ajuda para encontrar o seu caminho para a felicidade.</p>
+                    <img class="img266" src="./image03.png"/>
+                </div>
+            </section>
+            <section class="section-04">
+                <div class="spacer pink-to-orange" style="top: -33vw;"></div>
+                <div class="right-or-center">
+                    <p>O que ela não podia imaginar é que “O Caminho” que ela havia escolhido tornar-se-ia a sua felicidade, e que aqueles sonhos e desejos de menina eram apenas conquistas que seriam concedidas a ela, por Ele, para reafirmar Seu compromisso com Seus filhos.</p>
+                    <img class="img266" src="./image04.png"/>
+                </div>
+            </section>
+            <section class="section-01">
+                <div class="spacer orange-to-green" style="top: -32vw;"></div>
+                <div class="right-or-center">
+                    <p>E assim ela tem vivido desde Sua descoberta. Tentando tornar melhor cada pedra do caminho, de modo que os próximos possam, em vez de tropeçar, alcançarem um lugar mais alto. Continua amparando àqueles que de amparo precisam, e comemorando com àqueles que superam ou conquistam um marco em suas jornadas.</p>
+                    <img class="img266" src="./image05.png"/>
+                </div>
+            </section>
+            <section class="section-02">
+                <div class="spacer green-to-blue" style="top: -32vw;"></div>
+                <div class="right-or-center">
+                    <p>Parece ficção ou literatura eu sei, mas não é o caso; essa simplesmente é a minha esposa. E se eu, que sou imperfeito e não sou bom, consigo vê-la assim, imagine como Ele a vê... Tive o privilégio de viver nessa época e dividir minha jornada com essa pessoa maravilhosa que Deus colocou aqui para brilhar e encantar. Muito aprendizado! Todo dia eu tenho o prazer de compartilhar sua perspectiva, ela me explica pequenas nuances que, de outro modo, eu jamais teria percebido. E, por isso, sou grato demais...</p>
+                    <img class="img266" src="./image06.png"/>
+                </div>
+            </section>
+            <section class="section-03">
+                <div class="spacer blue-to-pink" style="top: -33vw;"></div>
+                <div>
+                    <p>Mi, gostaria de deixar a narrativa em terceira pessoa, te convidando a:</p>
+                    <div class="requests">
+                        <!--img src="./image07.jpg"/-->
+                        <ol>
+                            <li>Acreditar no meu EU TE AMO;</li>
+                            <li>Ficar sempre comigo (onde será que já ouvi isso?);</li>
+                            <li>E celebrar “dando risada e sendo feliz”.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="section-04">
+                <div class="spacer pink-to-orange" style="top: -33vw;"></div>
+                <div class="right-or-center">
+                    <p>Hoje você completa 42 anos, dos quais 12 foram ao meu lado... e meu Deus como passou voando! Feliz aniversário! Mas, como eu quero muito celebrar nossas bodas de ouro, você precisará quase dobrar sua idade atual, por que só aos seus 81 teremos esse prazer, então: </p>
+                    <img class="img266" src="./image08.png"/>
+                    <p>Parabéns pelo ano maravilhoso que me deu, mas aguenta aí porque muitos outros ainda virão, com a graça de Deus.</p>
+                </div>
+            </section>
+            <div class="pic-with-text img-max-700 extra-space" style="position: relative;">
+                <div class="spacer orange-to-blue" style="top: -4vw;"></div>
+                <img src="./bottom.jpg"/>
+                <div class="x-margin">
+                    <span class="bottom-img-text">Eu te amo, você é a mulher da minha vida.</span>
+                </div>
+            </div>
+            <h1>Dri</h1>
+        </div>
+    </body>
+</html>
